@@ -58,9 +58,13 @@ Retorno:
 {
 
   "id": 1,
+  
   "nome": "Paraná",
+  
   "sigla": "Pr",
+  
   "created_at": "2024-07-10T03:02:35.380Z",
+  
   "updated_at": "2024-07-10T03:02:35.380Z"
 }
 
