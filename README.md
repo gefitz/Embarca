@@ -1,7 +1,6 @@
 # README
 
-Api para estar buscando estados e cidades pelo brasil em ruby on rails;
-
+Api para estar buscando estados e cidades pelo brasil em ruby on rails;\n
 Get Estados
 Para estar retornando todos os estados o link de acesso é
 URL: http://localhost:3000/estados
