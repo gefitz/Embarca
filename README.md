@@ -2,7 +2,9 @@
 
 Api para estar buscando estados e cidades pelo brasil em ruby on rails;
 
-Get Estados;
+/estados
+
+Get
 
 Para estar retornando todos os estados o link de acesso é;
 
@@ -113,3 +115,139 @@ Retorno:
     "updated_at": "2024-07-10T03:06:01.966Z"
   }
 ]
+
+Post
+
+a url para estar acessando o metodo post URL:http://localhost:3000/estados,o corpo devera esta seguindo em formato json com as seguintes propriedades
+
+{
+  
+   "nome":"string",
+
+   "sigla":"string",
+}
+
+Put
+
+a url para estar acessando o metodo put URL:http://localhost:3000/estados/{idEstado}, o corpo devera esta seguindo em formato json com as seguintes propriedades
+
+{
+  
+   "nome":"string",
+
+   "sigla":"string",
+}
+
+Delete
+
+a url para estar acessando o metodo delete URL:http://localhost:3000/estados/{idEstado}
+
+/cidades
+Get
+
+Para estar retornando todos os estados o link de acesso é;
+
+URL: http://localhost:3000/cidades;
+
+vai estar retornando um array em json com seguinte propriedades;</br>
+
+[{
+
+  "id":int,
+  
+  "nome":string,
+  
+  "estado_id": int,
+  
+  "created_at": datetime,
+  
+  "update_at": datetime,
+  
+}];
+
+exemplo de como ficara o retorno do link;
+
+Retorno: [
+  {
+  {
+  
+    "id": 1,
+    "nome": "Curitiba",
+    "estado_id": 1,
+    "created_at": "2024-07-10T03:06:01.966Z",
+    "updated_at": "2024-07-10T03:06:01.966Z"
+  },
+    
+  }
+];
+
+Você podera esta buscando os estados por dois metodos, um pelo id do estado e outro pelo nome do estado;
+
+Para esta buscando estado atraves de seu id você devera seguir o formato do link a seguir
+
+http://localhost:3000/estados/{id}
+
+devera trocar o {id} pelo id que deseja esta buscando, vai esta retornando um json seguindo a mesma propriedades anteriores,
+
+exemplo de um requição atraves de busca pelo id do estado
+
+URL: http://localhost:3000/cidades/1
+
+Retorno:
+
+  {
+  
+    "id": 1,
+    "nome": "Curitiba",
+    "estado_id": 1,
+    "created_at": "2024-07-10T03:06:01.966Z",
+    "updated_at": "2024-07-10T03:06:01.966Z"
+  }
+
+
+A busca pelo nome do estado devera esta seguindo formato de url
+
+http://localhost:3000/estados?nome={NomeEstado}
+
+devera trocar o {NomeEstado} para qual você deseja esta buscando atraves da url, ele retornara um array em json seguindo a mesma propriedades anterior,
+
+exemplo de um requição atraves de busca pelo nome do estado
+
+URL: http://localhost:3000/cidades?nome=San
+
+Retorno: [
+  {
+  
+    "id": 1,
+    "nome": "Curitiba",
+    "estado_id": 1,
+    "created_at": "2024-07-10T03:06:01.966Z",
+    "updated_at": "2024-07-10T03:06:01.966Z"
+  },
+]
+
+Post
+
+a url para estar acessando o metodo post URL:http://localhost:3000/cidades,o corpo devera esta seguindo em formato json com as seguintes propriedades
+
+{
+  
+   "nome":"string",
+
+   "estado_id": int,
+}
+
+Put
+
+a url para estar acessando o metodo put URL:http://localhost:3000/cidades/{idCidade}, o corpo devera esta seguindo em formato json com as seguintes propriedades
+
+{
+  
+   "nome":"string",
+
+   "estado_id":int,
+}
+
+Delete
+
+a url para estar acessando o metodo delete URL:http://localhost:3000/cidades/{idCidade}
